@@ -7,8 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title: string = 'Counter app';
-}
+  public number: number = 10;
+  public base: number = 5
 
-const a = () => {
-  return 'hello'
+
+  accomulate(value: number) {
+    this.number += value;
+  }
+
 }
