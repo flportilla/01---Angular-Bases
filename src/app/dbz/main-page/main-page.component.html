@@ -1,0 +1,50 @@
+<h1>Chrono Trigger</h1>
+<hr />
+
+<div class="row">
+
+    <div class="col">
+        <h3>Character </h3>
+        <hr />
+        
+
+        <ul>
+            <li>Crono - 15.000</li>
+            <li>Marle - 8500</li>
+            <li>Lucca - 9000</li>
+        </ul>
+    </div>
+
+    <div class="col">
+        <h3>Add character</h3>
+        <hr />
+
+        <form (ngSubmit)="add()">
+
+            <input 
+                type="text" 
+                placeholder="Name" 
+                name="name"
+                [(ngModel)]="newCharacter.name"
+                />
+                <!-- 
+                    [ngModel] square brackets to assign a value
+                    (ngModel) parenthesis to emit the value of the event
+                    This means two way data binding =>
+                    [(ngModel)] This assigns the value and you can access to it
+                -->
+                
+                <!-- [value]="newCharacter.name" 
+                (input)="changeName( $event )" -->
+            <input 
+                type="number" 
+                placeholder="Power" 
+                name="power"
+                [(ngModel)]="newCharacter.power"
+            />
+
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
+</div>
