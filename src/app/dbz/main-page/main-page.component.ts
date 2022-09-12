@@ -22,19 +22,14 @@ export class MainPageComponent {
         },
     ]
 
+    addNewCharacter(char: Character) {
+        this.characters.push(char)
+    }
+
     public newCharacter: Character = {
-        name: '',
-        power: 0
+        name: 'Ayla',
+        power: 4500
     }
 
-    add() {
-        if ((this.newCharacter.name).trim().length === 0) return;
-        this.characters.push(this.newCharacter)
-        this.newCharacter = {
-            name: '',
-            power: 0
-        }
-
-    }
 
 }
